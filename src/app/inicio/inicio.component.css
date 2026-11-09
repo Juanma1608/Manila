@@ -1,0 +1,276 @@
+:host {
+    display: block;
+    color: #24150D;
+}
+
+/* PORTADA */
+
+.portada {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background: linear-gradient(
+        90deg,
+        rgba(36, 21, 13, 0.95),
+        rgba(36, 21, 13, 0.65),
+        rgba(36, 21, 13, 0.15)
+    ),
+    url('/assets/img/portada.jpg');
+
+    background-size: cover;
+    background-position: center;
+    color: #FFF5E5;
+}
+
+.portada-contenido {
+    max-width: 650px;
+}
+
+.etiqueta,
+.subtitulo {
+    color: #D99A24;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.portada h1 {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.portada h1 span {
+    color: #D99A24;
+}
+
+.portada p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 530px;
+    color: #F2E5D5;
+}
+
+.botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn-principal,
+.btn-secundario {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-principal {
+    background-color: #D99A24;
+    color: #24150D;
+}
+
+.btn-principal:hover {
+    background-color: #F5BC52;
+    transform: translateY(-3px);
+}
+
+.btn-secundario {
+    border: 2px solid #FFF5E5;
+    color: #FFF5E5;
+}
+
+.btn-secundario:hover {
+    background-color: #FFF5E5;
+    color: #24150D;
+}
+
+
+/* PRESENTACIÓN */
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 85px 10%;
+    background-color: #FFF5E5;
+}
+
+.presentacion-imagen {
+    flex: 1;
+}
+
+.presentacion-imagen img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(36, 21, 13, 0.15);
+}
+
+.presentacion-texto {
+    flex: 1;
+}
+
+.presentacion-texto h2 {
+    font-size: 36px;
+    margin: 15px 0;
+    color: #24150D;
+}
+
+.presentacion-texto p {
+    color: #705B4B;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
+/* DESTACADOS */
+
+.destacados {
+    padding: 75px 8%;
+    background-color: #FFFFFF;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-seccion h2 {
+    font-size: 35px;
+    margin: 12px 0;
+    color: #24150D;
+}
+
+.titulo-seccion p {
+    color: #806D5D;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tarjeta {
+    background-color: #FFF5E5;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.tarjeta-contenido {
+    padding: 22px;
+}
+
+.tarjeta-contenido h3 {
+    color: #24150D;
+    font-size: 21px;
+}
+
+.tarjeta-contenido p {
+    color: #806D5D;
+    line-height: 1.6;
+}
+
+.tarjeta-contenido a {
+    color: #A66C0C;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tarjeta-contenido a:hover {
+    color: #D99A24;
+}
+
+
+/* INVITACIÓN */
+
+.invitacion {
+    background-color: #24150D;
+    color: #FFF5E5;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.invitacion h2 {
+    color: #D99A24;
+    font-size: 30px;
+}
+
+.invitacion p {
+    margin: 15px 0 25px;
+}
+
+.invitacion a {
+    display: inline-block;
+    background-color: #D99A24;
+    color: #24150D;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .presentacion {
+        flex-direction: column;
+        padding: 55px 7%;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portada h1 {
+        font-size: 42px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .portada {
+        min-height: 500px;
+        padding: 50px 7%;
+    }
+
+    .portada h1 {
+        font-size: 35px;
+    }
+
+    .presentacion-texto h2 {
+        font-size: 29px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 28px;
+    }
+
+}

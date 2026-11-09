@@ -1,0 +1,123 @@
+
+<section class="seccion-bebidas">
+  <div class="container">
+
+    <div class="titulo-seccion text-center">
+      <p class="subtitulo">NUESTRA BARRA</p>
+      <h2>Nuestras bebidas</h2>
+      <p>Encuentra la bebida perfecta para acompañar tu momento.</p>
+    </div>
+
+    <div class="filtros-bebidas">
+
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar bebida por nombre"
+        [(ngModel)]="nombre"
+        (keyup.enter)="buscarNombre()">
+
+      <button class="btn-buscar" (click)="buscarNombre()">
+        Buscar bebida
+      </button>
+
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar por ingrediente"
+        [(ngModel)]="ingrediente"
+        (keyup.enter)="buscarIngrediente()">
+
+      <button class="btn-buscar" (click)="buscarIngrediente()">
+        Buscar ingrediente
+      </button>
+
+      <select
+        class="form-select"
+        [(ngModel)]="tipoAlcohol"
+        (change)="cambiarFiltros()">
+
+        <option value="">Todos los tipos de bebida</option>
+        <option value="Alcoholic">Alcohólicas</option>
+        <option value="Non alcoholic">Sin alcohol</option>
+
+      </select>
+
+      <select
+        class="form-select"
+        [(ngModel)]="categoria"
+        (change)="cambiarFiltros()">
+
+        <option value="">Todas las categorías</option>
+        <option value="Ordinary Drink">Bebida ordinaria</option>
+        <option value="Cocktail">Cóctel</option>
+
+      </select>
+
+    </div>
+
+    @if (cargando) {
+      <div class="mensaje-bebidas text-center">
+        <h4>Cargando bebidas...</h4>
+      </div>
+    }
+
+    @if (mensajeError) {
+      <div class="mensaje-bebidas text-center">
+        <h4>{{ mensajeError }}</h4>
+      </div>
+    }
+
+    @if (!cargando && bebidas.length > 0) {
+
+      <div class="tarjetas-bebidas">
+
+        @for (bebida of bebidas; track bebida.idDrink) {
+
+          <div class="tarjeta-bebida">
+
+            <img
+              [src]="bebida.strDrinkThumb"
+              [alt]="bebida.strDrink">
+
+            <div class="contenido-bebida">
+
+              <h3>{{ bebida.strDrink }}</h3>
+
+              <p>
+                <strong>Ingredientes:</strong>
+                {{ obtenerIngredientes(bebida).join(', ') }}
+              </p>
+
+              <p>
+                <strong>Tipo:</strong>
+                {{ bebida.strAlcoholic }}
+              </p>
+
+              <p>
+                <strong>Categoría:</strong>
+                {{ bebida.strCategory }}
+              </p>
+
+              <div class="precio-bebida">
+                ${{ formatoPrecio(bebida.precio) }}
+              </div>
+
+              <button
+                class="btn-agregar"
+                (click)="agregarAlPedido(bebida)">
+                Agregar al pedido
+              </button>
+
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+
+    }
+
+  </div>
+</section>
