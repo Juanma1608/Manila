@@ -1,0 +1,189 @@
+
+.seccion-bebidas {
+    background-color: #FFF5E5;
+    padding: 80px 0;
+    min-height: 70vh;
+}
+
+.titulo-seccion {
+    margin-bottom: 45px;
+}
+
+.subtitulo {
+    color: #A66C0C;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.titulo-seccion h2 {
+    color: #24150D;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.titulo-seccion p:last-child {
+    color: #806D5D;
+}
+
+.filtros-bebidas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.filtros-bebidas input,
+.filtros-bebidas select {
+    background-color: white;
+    color: #24150D;
+    border: 1px solid #D9B77A;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.filtros-bebidas input:focus,
+.filtros-bebidas select:focus {
+    border-color: #D99A24;
+    box-shadow: 0 0 0 3px rgba(217,154,36,0.15);
+    outline: none;
+}
+
+.filtros-bebidas input::placeholder {
+    color: #927F6D;
+}
+
+/* BOTONES DE BÚSQUEDA */
+
+.btn-buscar {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #D99A24;
+    color: #24150D;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-buscar:hover {
+    background-color: #A66C0C;
+    color: white;
+}
+
+.mensaje-bebidas {
+    margin-top: 60px;
+    padding: 40px 20px;
+    border: 1px dashed #B58A43;
+    border-radius: 12px;
+    background-color: #FFFAF1;
+}
+
+.mensaje-bebidas h4 {
+    color: #A66C0C;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.mensaje-bebidas p {
+    color: #806D5D;
+}
+
+/* BOTÓN AGREGAR */
+
+.btn-agregar {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    background-color: #D99A24;
+    color: #24150D;
+    font-weight: bold;
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: #A66C0C;
+    color: white;
+}
+
+/* TARJETAS DE BEBIDAS */
+
+.tarjetas-bebidas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.tarjeta-bebida {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(36, 21, 13, 0.10);
+    transition: 0.3s;
+}
+
+.tarjeta-bebida:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-bebida img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.contenido-bebida {
+    padding: 20px;
+}
+
+.contenido-bebida h3 {
+    color: #693B24;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contenido-bebida p {
+    color: #806D5D;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.precio-bebida {
+    color: #A66C0C;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* ADAPTACIÓN PARA TABLETS */
+
+@media (max-width: 850px) {
+    .tarjetas-bebidas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 550px) {
+    .tarjetas-bebidas {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .filtros-bebidas {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 30px;
+    }
+}
