@@ -1,27 +1,89 @@
-# Manila
+MANILA Restaurante es una aplicación web desarrollada con Angular que permite consultar el menú de un restaurante, visualizar comidas y bebidas, gestionar pedidos y generar facturas en formato PDF.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+La aplicación integra servicios externos para obtener información de diferentes productos y ofrece una interfaz intuitiva, organizada y adaptable a distintos dispositivos.
 
-## Development server
+Objetivo general
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Desarrollar una aplicación web para un restaurante que facilite la consulta de su menú y la gestión de pedidos, proporcionando una experiencia de usuario sencilla y funcional.
 
-## Code scaffolding
+Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Inicio
 
-## Build
+Página principal de presentación del restaurante, con información general y acceso a las diferentes secciones de la aplicación.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Comidas
 
-## Running unit tests
+Consulta de platos mediante una API externa.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Búsqueda de comidas por nombre e ingrediente.
 
-## Running end-to-end tests
+Filtrado de platos por categorías.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Visualización de imágenes, ingredientes y precios.
 
-## Further help
+Bebidas
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Consulta de bebidas mediante una API externa.
+
+Búsqueda por nombre e ingrediente.
+
+Filtrado por tipo de bebida y categoría.
+
+Visualización de imágenes, ingredientes y precios.
+
+Pedidos
+
+Registro de los datos del cliente.
+
+Agregar comidas y bebidas al carrito.
+
+Modificación de las cantidades de los productos.
+
+Eliminación de productos.
+
+Cálculo automático del total del pedido.
+
+Generación y descarga de facturas en formato PDF.
+
+Juego
+
+Minijuego interactivo en el que el usuario debe encontrar una hamburguesa y una bebida escondidas.
+
+Tecnologías utilizadas
+
+Angular 17
+
+TypeScript
+
+HTML5
+
+CSS3
+
+Bootstrap 5
+
+RxJS
+
+jsPDF
+
+APIs utilizadas
+
+TheMealDB: servicio externo utilizado para consultar comidas, ingredientes y categorías.
+
+Sitio web: https://www.themealdb.com/api.php
+
+TheCocktailDB: servicio externo utilizado para consultar bebidas, ingredientes y categorías.
+
+Sitio web: https://www.thecocktaildb.com/api.php
+
+Identidad visual
+
+El diseño de MANILA Restaurante utiliza una combinación de colores que representa la identidad visual del proyecto:
+
+Café oscuro: #24150D
+
+Dorado: #D99A24
+
+Crema: #FFF5E5
+
+Café: #693B24
